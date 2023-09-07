@@ -1,0 +1,18 @@
+---
+apiVersion: kubeteach.geberl.io/v1alpha1
+kind: ExerciseSet
+metadata:
+  name: set3
+spec:
+  taskDefinitions:
+    - name: task01
+      taskDefinitionSpec:
+        taskSpec:
+          title: "Create namespace"
+          description: "Create a new namespace with the name kubeteach"
+          helpURL: "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/"
+        taskCondition:
+          - apiVersion: v1
+            kind: Namespace
+            name: "kubeteach"
+        points: 5
